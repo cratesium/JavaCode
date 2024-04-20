@@ -1,0 +1,47 @@
+class Solution {
+ 	public static String binary(Integer n )
+	{
+		StringBuilder sb = new StringBuilder("");
+		while(n!=1) {
+			int p=n%2;
+			sb.append(p);
+			n=n/2;
+			
+		}
+		sb.append(1);
+		sb.reverse();
+			
+			
+		return sb+"";
+		//return null;
+		
+	}
+   
+
+   
+    public int sumIndicesWithKSetBits(List<Integer> nums, int k) {
+        String [] array = new String[nums.size()];
+        for( int i=0 ;i<nums.size();i++){
+            array[i]=binary(nums.get(i));
+           // System.out.println(nums.get(i)+" -> "+array[i]);
+        }
+        int sum=0;
+                                  System.out.println("---- k is "+k+"----------");
+
+        for( int i=0 ;i<array.length;i++)
+        {    int count =0;
+             for ( int j=0 ;j<array[i].length();j++)
+             {
+                 if(array[i].charAt(j)=='1')
+                 count++;
+             }
+
+             if(count==k){
+             sum+=nums.get(i);
+             System.out.println(array[i]);
+
+             }
+        }
+        return sum;
+    }
+}

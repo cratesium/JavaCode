@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Leetcode.backtracking.UniquePaths&apos; to &apos;UniquePathsTwoDirections&apos;&#x0A;- Original project: &apos;BackTracking&apos;&#x0A;- Original element: &apos;Leetcode.backtracking.UniquePaths&apos;&#x0A;- Renamed element: &apos;Leetcode.backtracking.UniquePathsTwoDirections&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;UniquePaths&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;Leetcode.backtracking{UniquePaths.java[UniquePaths" matchStrategy="1" name="UniquePathsTwoDirections" qualified="false" references="true" similarDeclarations="false" stamp="1709732190323" textual="false" version="1.0"/>
+</session>

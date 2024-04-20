@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 elements to &apos;javaCore/src/multiThreading&apos;&#x0A;- Original project: &apos;javaCore&apos;&#x0A;- Destination element: &apos;javaCore/src/multiThreading&apos;&#x0A;- Original elements:&#x0A;     thread1.java&#x0A;     basicsOfMultithreading.java&#x0A;     multithreading2.java" description="Copy compilation units" destination="/src\/multiThreading" element1="/src\/multiThreading&lt;{thread1.java" element2="/src\/multiThreading&lt;{basicsOfMultithreading.java" element3="/src\/multiThreading&lt;{multithreading2.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1709028529265" units="3" version="1.0"/>
+</session>

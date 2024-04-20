@@ -1,0 +1,34 @@
+package hey;
+class classA extends Thread {
+	public void run() {
+		for( int i=0 ;i<50000;i++)
+		{
+			System.out.println("this is class A ");
+		}
+		
+	}
+}
+class classB extends Thread {
+	public void run() {
+		for( int i=0 ;i<50000;i++)
+		{
+			System.out.println("this is class B ");
+		}
+		
+	}
+}
+class classC extends Thread {
+	public void run() {
+		for( int i=0 ;i<50000;i++)
+		{
+			System.out.println("this is class C ");
+		}
+		
+	}
+}
+public class class1 { 
+	public static void main(String[] args) {
+		((Runnable) new class1()).run();
+	}
+
+}

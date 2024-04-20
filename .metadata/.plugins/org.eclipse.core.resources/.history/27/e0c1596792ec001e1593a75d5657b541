@@ -1,0 +1,148 @@
+package linkedpackage;
+
+import linkedpackage.LinkedlistAdv.Node;
+
+public class Mergesort {
+	
+		public static class Node{
+			int data;
+			Node next;
+			public Node() {
+				this.data=0;
+				this.next=null;
+				
+			}
+			public Node(int data) {
+				this .data= data;
+				this.next= null;
+				
+			}
+		}
+		public static Node head;
+		public void add( int data ) {
+			Node newNode= new Node(data);
+			if(head==null)
+			{
+				head=newNode;
+				return;
+			}
+		   Node tempNode=head;
+		   while(tempNode.next!=null)
+		   {
+			   tempNode=tempNode.next;
+		   }
+		   tempNode.next=newNode;
+		   
+			
+		}
+		public void print() {
+			Node tempNode= head;
+			while(tempNode!=null) {
+			  System.out.print(tempNode.data+" -> ");
+			  tempNode=tempNode.next;
+			}
+			
+		}
+		private Node getListMiddle(Node head) {
+			if(head==null)
+				return null;
+			if(head.next==null)
+				return head;
+			Node slowNode= head;
+			Node fastNode=head.next;
+			
+			while(fastNode!=null && fastNode.next!=null)
+			{
+				slowNode=slowNode.next;
+				fastNode=fastNode.next.next;
+			}
+			return slowNode;
+			
+		}
+		private Node merge(Node head1, Node head2) {
+			Node newnNode= new Node(-1);
+			Node finalNode,tempNode;
+			finalNode=tempNode=newnNode;
+			while(head1!=null && head2!=null)
+			{ 
+				if(head1.data >= head2.data)
+				{
+				 tempNode.next=head2;
+				 head2=head2.next;
+				 tempNode=tempNode.next;
+				 tempNode.next=null;
+				 
+					
+				}
+				else {
+					tempNode.next=head1;
+					head1=head1.next;
+					tempNode=tempNode.next;
+				
+					
+				}
+			
+			}
+			while(head1!=null) {
+			tempNode.next=head1;
+			
+				
+			}
+			
+			while(head2!=null) {
+				tempNode.next=head2;
+				
+			}
+				
+			
+			return finalNode.next;
+		}
+		
+		public Node  mergesort (Node head) {
+			
+			//base case 
+			if(head==null || head.next==null)
+				return head;
+			
+			//find middle 
+		   Node sayMiddNode=getListMiddle(head);
+		   Node leftHeadNode=head;
+		   Node rightheadNode=sayMiddNode.next;
+		   sayMiddNode.next=null;
+		   
+			
+			//apply mergesort reccursively 
+		   Node leftmergesort=mergesort(leftHeadNode);
+		   Node righmergesort=mergesort(rightheadNode);
+			
+			
+			//merge 
+		   
+		   Node finalNode=merge(leftmergesort,righmergesort);
+			return finalNode;
+		}
+		public void printUsingNode(Node head) {
+			Node tempNode= head;
+			while(tempNode!=null)
+			{
+				System.out.print(tempNode.data +"->");
+				tempNode=tempNode.next;
+			}
+			System.out.println("end of List ");
+			
+		}
+		public static void main(String[] args) {
+			Mergesort linkedMergesort= new Mergesort();
+			linkedMergesort.add(1);
+			linkedMergesort.add(100);
+			linkedMergesort.add(34);
+			linkedMergesort.add(23);
+			linkedMergesort.add(29);
+			linkedMergesort.print();
+			System.out.println("sorting---> ");
+			linkedMergesort.printUsingNode(linkedMergesort.mergesort(head));
+			
+		}
+		}
+
+

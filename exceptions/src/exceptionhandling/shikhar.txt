@@ -1,0 +1,3 @@
+hii this is shikhar.txt file 
+it is a structured file 
+cant say 100% structured

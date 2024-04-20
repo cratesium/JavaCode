@@ -1,0 +1,18 @@
+INDEX VERSION 1.134+/Volumes/macOsHdData/javaMain/.metadata/.plugins/org.eclipse.jdt.core
+282669215.index
+3036986967.index
+4071984118.index
+592963367.index
+3692041950.index
+702990862.index
+3801238599.index
+2812063493.index
+1771086873.index
+3074455524.index
+2879165034.index
+112642044.index
+2849169636.index
+308356745.index
+3468240799.index
+776207630.index
+1865797976.index

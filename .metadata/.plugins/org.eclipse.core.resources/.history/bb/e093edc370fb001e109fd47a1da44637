@@ -1,0 +1,28 @@
+package com.mutithreading;
+
+
+class exampleClass extends Thread{
+	public void run() {
+		
+		for( int i=0 ;i< Integer.MAX_VALUE;i++)
+		System.out.println(" example class ");
+		
+		
+	}
+}
+
+public class BasicInfo extends Thread{
+	public void run() {
+		for( int i=0 ;i< Integer.MAX_VALUE;i++)
+			System.out.println(" basic info class");
+		
+		
+    
+	}
+	public static void main(String[] args) {
+		new BasicInfo().run();
+		new exampleClass().run();
+		
+	}
+
+}

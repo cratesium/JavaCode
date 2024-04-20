@@ -1,0 +1,152 @@
+package com.pkg;
+
+import java.util.Iterator;
+
+public class LinkedlLst2 {
+	public static class Node{
+		int data;
+		Node next;
+		public Node() {
+			data=0;
+			next=null;
+			
+			
+		}
+		public Node(int data)
+		{
+			this.data=data;
+			this.next=null;
+		}
+	}
+	int size=0;
+	public static Node head;
+	public static Node tail;
+	
+	public void add( int data) {
+		Node newNode = new Node(data);
+		size++;
+		if(head==null) {
+			head=newNode;
+			tail= newNode;
+			return;
+		}
+		else {
+			Node tempNode=head;
+			while(tempNode.next!=null){
+				tempNode=tempNode.next;
+				
+				
+			}
+			tempNode.next=newNode;
+			tail=newNode;
+			
+			
+		}
+		
+	}
+	public void print() {
+		Node tempNode=head;
+		while(tempNode!=null)
+		{
+			System.out.print(tempNode.data+"->");
+			tempNode=tempNode.next;
+		}
+		System.out.println("Null");
+	}
+//	public Node getmiddle() {
+//		Node fastNode,slowNode;
+//		fastNode=slowNode=head;
+//		while(fastNode.next!=null || fastNode!=null) {
+//			slowNode=slowNode.next;
+//			fastNode=fastNode.next.next;
+//		}
+//		
+//		return slowNode;
+//		
+//	}
+	public Node getmiddle() {
+		Node slowptr=head;
+		Node fastptr=head;
+		while(fastptr!=null && fastptr.next!=null) {
+			fastptr=fastptr.next.next;
+			slowptr=slowptr.next;
+		}
+		return slowptr;
+				}
+	public void palindromeCheck() {
+		if(head==null || head.next==null)
+			System.out.println("palindrome ");
+		
+	        if(head.next.next==null){
+	            Node pmtr=head;
+
+	        
+	        if(pmtr.data==pmtr.next.data) 
+	        	System.out.println("true pal");
+	        else 
+System.out.println("false pal");	        }
+		Node midNode=getmiddle();
+		Node prevNode=null;
+		Node crrNode=midNode.next;
+		Node nexNode;
+		while(crrNode!=null) {
+			nexNode=crrNode.next;
+			crrNode.next=prevNode;
+			prevNode=crrNode;
+			crrNode=nexNode;
+			
+			
+		}
+		Node rightNode=prevNode;
+		
+		Node leftTempNode=head;
+		Node rightTempNode=rightNode;
+		while(leftTempNode!=null && rightTempNode!=null)
+		{
+			if(leftTempNode.data!=rightTempNode.data) {
+				System.out.println("not palindrome");
+				return;
+			}
+			leftTempNode=leftTempNode.next;
+			rightTempNode=rightTempNode.next;
+		}
+		System.out.println(" palindrome");
+		
+	}
+	public void rotateRight() {
+		Node head1,tempnode=head;
+		
+		
+		while(tempnode.next!=null && tempnode.next.next!=null)
+		{
+			tempnode=tempnode.next;
+			
+		}
+        head1=tempnode.next;
+    	tempnode.next=null;
+    	head1.next=head;
+    	head=head1;
+//		
+		
+		print();
+		
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		LinkedlLst2 linkedListObject=new LinkedlLst2();
+		linkedListObject.add(1);
+		linkedListObject.add(2);
+		linkedListObject.add(3);
+		linkedListObject.add(4);
+		linkedListObject.add(5);
+		linkedListObject.add(6);
+		
+	    linkedListObject.print();
+//		linkedListObject.palindromeCheck();
+	    linkedListObject.rotateRight();
+		
+	}
+
+}

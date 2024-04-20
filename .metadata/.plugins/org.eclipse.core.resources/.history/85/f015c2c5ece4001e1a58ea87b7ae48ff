@@ -1,0 +1,54 @@
+package linkedpackage;
+
+public class MyLinkedList {
+	
+	public static class Node{
+		int data;
+		Node next;
+		public Node() {
+			this.data=0;
+			this.next=null;
+			
+		}
+		public Node(int data) {
+			this.data=data;
+			this.next=null;
+			
+		}
+		
+	}
+	public static Node head,tail;
+	public void add(int data ) {
+		//create new node 
+		Node newNode= new Node(data);
+		
+		//check whether the ll is empty or not 
+		if(head==null)
+			{
+			head=tail=newNode;
+	        return ;
+			}
+		//newnode->next= head
+		newNode.next=head;
+		//head=newnode;
+		head=newNode;
+	}
+	public void print() {
+		Node tempNode=head;
+		while(tempNode!=null)
+		{
+			System.out.print(tempNode.data+" ");
+			tempNode=tempNode.next;
+		}
+	}
+	
+	public static void main(String[] args) {
+		MyLinkedList linkedList=new MyLinkedList();
+		linkedList.add(0);
+		linkedList.add(10);
+		linkedList.add(110);
+		linkedList.print();
+		
+	}
+
+}

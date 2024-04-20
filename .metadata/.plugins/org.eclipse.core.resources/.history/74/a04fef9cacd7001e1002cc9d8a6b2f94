@@ -1,0 +1,13 @@
+package coreQuestionspackage;
+
+public class overLoadedmain {
+	public static void main(String[] args) {
+		System.out.println("this is main");
+		main();
+	}
+	public static int main() {
+		return 0;
+		
+	}
+
+}

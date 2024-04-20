@@ -1,0 +1,53 @@
+package com.pkg;
+
+public class MergeKsortedLists {
+	public static Node head[];
+	public void add(Node head , int data ) {
+		Node newNode = new Node(data);
+		if(head == null)
+		{
+			head = newNode;
+			return ;
+		}
+		Node tempNode= head;
+		while(tempNode.next!=null)
+		{
+			tempNode=tempNode.next;
+		}
+		tempNode.next=newNode;
+		
+	}
+	public void print( Node head) {
+		Node tempNode=head;
+		if(tempNode==null) {
+			System.out.println("list is empty ");
+			return ;
+		}
+		while(tempNode!=null)
+		{
+			System.out.print(tempNode.data +" ");
+		}
+		System.out.println();
+	}
+	
+	public static void main(String[] args) {
+		 head[3]= new Node(0);
+		 MergeKsortedLists objKsortedLists= new MergeKsortedLists();
+		 objKsortedLists.add(head[0], 0);
+		 objKsortedLists.add(head[0], 10);
+		 objKsortedLists.add(head[0], 20);
+		 objKsortedLists.add(head[1], 20);
+		 objKsortedLists.add(head[1], 200);
+		 objKsortedLists.add(head[1], 2000);
+		 objKsortedLists.add(head[2], 120);
+		 objKsortedLists.add(head[2], 130);
+		 objKsortedLists.add(head[2], 140);
+		 objKsortedLists.add(head[2], 150);
+		 
+		 objKsortedLists.print(head[0]);
+		 
+	}
+	
+	
+
+}

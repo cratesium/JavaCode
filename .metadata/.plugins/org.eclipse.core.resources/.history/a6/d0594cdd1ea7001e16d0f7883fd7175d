@@ -1,0 +1,29 @@
+package com.shikhar.packa;
+import java.util.*;
+public class comparatorstrings {
+   public static void main(String[] args) {
+		Scanner scanner = new  Scanner(System.in);
+ArrayList<String> list= new ArrayList<String>();
+	System.out.println(" enter no of strings ");
+	 int n = scanner.nextInt();
+	 for ( int i=0 ;i< n ;i++) {
+		 list.add(scanner.next());
+		 
+	 }
+	 System.out.println(" the strings entered are ");
+	 for( String i: list)
+	 {
+		 System.out.println(i);
+	 }
+	 Collections.sort(list);
+	 System.out.println(" after normal sorting ");
+	 for( String i: list)
+	 {
+		 System.out.println(i);
+	 }
+	
+	 
+}
+	
+
+}

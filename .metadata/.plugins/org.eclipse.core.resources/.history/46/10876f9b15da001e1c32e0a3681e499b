@@ -1,0 +1,22 @@
+package coreQuestionspackage;
+
+public class classpkg {
+	public static void demoprint() {
+		try {
+			throw new Exception("demo");
+		} catch (Exception e) {
+			System.out.println("caught inside catch ");
+			
+		}
+		
+	}
+	public static void main(String[] args) {
+		try {
+			demoprint();
+		} catch (Exception e) {
+			System.out.println("main s exception");
+			// TODO: handle exception
+		}
+		
+	}
+}

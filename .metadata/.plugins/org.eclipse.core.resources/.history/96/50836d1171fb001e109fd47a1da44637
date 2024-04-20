@@ -1,0 +1,25 @@
+package com.mutithreading;
+import java.lang.Thread;
+
+class classA extends ThreadGroup{
+
+		public classA(String name) {
+		super(name);
+		// TODO Auto-generated constructor stub
+	}
+
+		private void print() {
+			System.out.println(" this is class A ");
+		}
+	
+}
+class ClassB extends Thread {
+	private void main() {
+		System.out.println(" this is class B ");
+		
+	}
+}
+public class thread1 {
+	new classA().stat
+
+}

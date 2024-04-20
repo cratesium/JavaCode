@@ -1,0 +1,6 @@
+hii this is structured file 
+for the connecting 
+drivers 
+of jdbc 
+error occuring in  thread 2 
+throw exception

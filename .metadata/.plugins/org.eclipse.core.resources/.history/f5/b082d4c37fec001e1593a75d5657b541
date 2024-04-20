@@ -1,0 +1,57 @@
+package linkedpackage;
+
+import linkedpackage.LinkedlistAdv.Node;
+
+public class Mergesort {
+	
+		public static class Node{
+			int data;
+			Node next;
+			public Node() {
+				this.data=0;
+				this.next=null;
+				
+			}
+			public Node(int data) {
+				this .data= data;
+				this.next= null;
+				
+			}
+		}
+		public static Node head;
+		public void add( int data ) {
+			Node newNode= new Node(data);
+			if(head==null)
+			{
+				head=newNode;
+				return;
+			}
+		   Node tempNode=head;
+		   while(tempNode.next!=null)
+		   {
+			   tempNode=tempNode.next;
+		   }
+		   tempNode.next=newNode;
+		   
+			
+		}
+		public void print() {
+			Node tempNode= head;
+			while(tempNode!=null) {
+			  System.out.print(tempNode.data+" -> ");
+			  tempNode=tempNode.next;
+			}
+			
+		}
+		public static void main(String[] args) {
+			Mergesort linkedMergesort= new Mergesort();
+			linkedMergesort.add(1);
+			linkedMergesort.add(100);
+			linkedMergesort.add(34);
+			linkedMergesort.add(23);
+			linkedMergesort.add(29);
+			linkedMergesort.print();
+		}
+		}
+
+

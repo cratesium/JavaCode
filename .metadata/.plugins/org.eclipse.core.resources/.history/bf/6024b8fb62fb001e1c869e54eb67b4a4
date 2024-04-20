@@ -1,0 +1,23 @@
+package com.mutithreading;
+
+
+class exampleClass implements Runnable{
+	public void run() {
+		System.out.println("max "+Object.MAX_VALUE);
+		
+		
+	}
+}
+
+public class BasicInfo implements Runnable{
+	public void run() {
+		
+    
+	}
+	public static void main(String[] args) {
+		new BasicInfo().run();
+		new exampleClass().run();
+		
+	}
+
+}

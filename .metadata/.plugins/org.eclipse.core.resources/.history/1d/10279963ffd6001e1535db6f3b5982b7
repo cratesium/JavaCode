@@ -1,0 +1,8 @@
+package package1;
+
+public class initialClass {
+	public static void main(String[] args) {
+		System.out.println("creating thread ");
+	}
+
+}

@@ -1,0 +1,36 @@
+package package1;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.Scanner;
+
+class SecondClass{
+	 void staticError() throws Exception {
+		FileReader fileReader = new FileReader("/Volumes/macOsHdData/javaMain/multithreading/src/package1/initialClass.txt");
+		 BufferedReader bufferedReader = new BufferedReader(fileReader);
+		 String getString;
+		 while((getString=bufferedReader.readLine())!=null) {
+			 System.out.println(getString);
+		 }
+		
+	}
+}
+
+public class initialClass {
+	public static void main(String[] args) {
+		System.out.println("Running the Exception ");
+		SecondClass objectSecondClass = new SecondClass();
+		try (Scanner scanner = new  Scanner(System.in)){
+			objectSecondClass.staticError();
+			
+		} catch (Exception e) {
+			System.out.println(e.getLocalizedMessage());
+			
+			// TODO: handle exception
+		}finally {
+			System.out.println("exiting the program ");
+		}
+		
+	}
+
+}
